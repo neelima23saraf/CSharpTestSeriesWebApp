@@ -1,0 +1,19 @@
+ID,QuestionID,A,B,C,D
+1,1,Yes,No,,
+2,2,Yes,No,,
+3,3,Within the class,Within the assembly,Across the assemby,Across the assembly in the derived class
+4,4,With in the class only,With in the derived class,With in the class and derived class,Across the assembly in the derived class
+5,5,With in the class only,With in the derived class,With in the class and derived class,Across the assembly in the derived class
+6,6,Public,Private,Protected,Internal
+7,7,Public,Private,Protected,Internal
+8,8,Yes,No,,
+9,9,Yes,No,,
+10,10,Public class GenericClass<T>,Public class GenericClass<>T,Public class GenericClassT<>,Public class GenericClass<>
+11,11,Only 1,Only 2,Only 3,"1, 2, 3"
+12,12,Reflection,Retraction,Unit testing,Progression
+13,13,Collection of classes,Public class,Collection of namespace,Private class
+14,14,System.Collections.Generic,System.Collections,System.Data,System.Generics
+15,15,Exporting,Retraction,Unit testing,Reflection
+16,16,Yes,No,,
+17,17,Stack,Heap,,
+18,18,Stack,Heap,,

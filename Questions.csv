@@ -1,0 +1,27 @@
+ID,Question,Answer,TopicID,Explanation
+1,Can a class have any access specifier ?,B,1,"Elements defined in a namespace cannot be explicitly declared as private, protected, protected internal or private protected. A Class within a namespace can only be declared public or internal."
+2,"A class is declared without a namsespace as below 
+private class Person
+{
+}
+Will the file compile?",B,1,"The following example generates CS1527 error.  Because a class should be declared in with in a namsepace, when no namespace is explicitly declared all type declarations are located implicitly within the global namespace. A class can not be declared private within a namespace.
+"
+3,What is the scope of Internal methods ?,B,1,Internal types can only be accessed within a dll. 
+4,What is the scope of private protected members ?,C,1,Private protected types can only be accessecd by the Parent and its child class.
+5,What is the scope of  protected internal members ?,D,1,
+6,What is the default access modifier of an Interfaces ?,D,1,
+7,What is the default access modifier of a class ?,D,1,
+8,Can a constructor be internal?,A,1,
+9,Can any memebre of the class can have higher access than the class it it declared in?,B,1,
+10,How to declare a generic class ?,A,2,
+11,"Generic classes and methods combine
+1) Reusability
+2) type safety
+3) efficiency",A,2,
+12,What can we implement using Generics?,A,2,
+13,The most common use of generics is to create ,A,2,
+14,The .NET class library contains several generic collection classes in,A,2,
+15,Information on the types that are used in a generic data type may be obtained at run-time by using,D,2,
+16,Boxing and unboxing are computationally expensive processes,A,2,
+17,Where is value type stored?,A,2,
+18,Where is reference type stored?,B,2,
