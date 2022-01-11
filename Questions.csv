@@ -1,27 +1,122 @@
-ID,Question,Answer,TopicID,Explanation
-1,Can a class have any access specifier ?,B,1,"Elements defined in a namespace cannot be explicitly declared as private, protected, protected internal or private protected. A Class within a namespace can only be declared public or internal."
+ID,Question,Answer,TopicID,Explanation,A,B,C,D
+1,Can a class have any access specifier ?,B,1,"Elements defined in a namespace cannot be explicitly declared as private, protected, protected internal or private protected. A Class within a namespace can only be declared public or internal.",Yes,No,,
 2,"A class is declared without a namsespace as below 
 private class Person
 {
 }
 Will the file compile?",B,1,"The following example generates CS1527 error.  Because a class should be declared in with in a namsepace, when no namespace is explicitly declared all type declarations are located implicitly within the global namespace. A class can not be declared private within a namespace.
-"
-3,What is the scope of Internal methods ?,B,1,Internal types can only be accessed within a dll. 
-4,What is the scope of private protected members ?,C,1,Private protected types can only be accessecd by the Parent and its child class.
-5,What is the scope of  protected internal members ?,D,1,
-6,What is the default access modifier of an Interfaces ?,D,1,
-7,What is the default access modifier of a class ?,D,1,
-8,Can a constructor be internal?,A,1,
-9,Can any memebre of the class can have higher access than the class it it declared in?,B,1,
-10,How to declare a generic class ?,A,2,
+",Yes,No,,
+3,What is the scope of Internal methods ?,B,1,Internal types can only be accessed within a dll. ,Within the class,Within the assembly,Across the assemby,Across the assembly in the derived class
+4,What is the scope of private protected members ?,C,1,Private protected types can only be accessecd by the Parent and its child class.,With in the class only,With in the derived class,With in the class and derived class,Across the assembly in the derived class
+5,What is the scope of  protected internal members ?,D,1,,With in the class only,With in the derived class,With in the class and derived class,Across the assembly in the derived class
+6,What is the default access modifier of an Interfaces ?,D,1,,Public,Private,Protected,Internal
+7,What is the default access modifier of a class ?,D,1,,Public,Private,Protected,Internal
+8,Can a constructor be internal?,A,1,,Yes,No,,
+9,Can any memebre of the class can have higher access than the class it it declared in?,B,1,,Yes,No,,
+10,How to declare a generic class ?,A,2,,Public class GenericClass<T>,Public class GenericClass<>T,Public class GenericClassT<>,Public class GenericClass<>
 11,"Generic classes and methods combine
 1) Reusability
 2) type safety
-3) efficiency",A,2,
-12,What can we implement using Generics?,A,2,
-13,The most common use of generics is to create ,A,2,
-14,The .NET class library contains several generic collection classes in,A,2,
-15,Information on the types that are used in a generic data type may be obtained at run-time by using,D,2,
-16,Boxing and unboxing are computationally expensive processes,A,2,
-17,Where is value type stored?,A,2,
-18,Where is reference type stored?,B,2,
+3) efficiency",A,2,,Only 1,Only 2,Only 3,"1, 2, 3"
+12,What can we implement using Generics?,A,2,,Reflection,Retraction,Unit testing,Progression
+13,The most common use of generics is to create ,A,2,,Collection of classes,Public class,Collection of namespace,Private class
+14,The .NET class library contains several generic collection classes in,A,2,,System.Collections.Generic,System.Collections,System.Data,System.Generics
+15,Information on the types that are used in a generic data type may be obtained at run-time by using,D,2,,Exporting,Retraction,Unit testing,Reflection
+16,Boxing and unboxing are computationally expensive processes,A,2,,Yes,No,,
+17,Where is value type stored?,A,2,,Stack,Heap,,
+18,Where is reference type stored?,B,2,,Stack,Heap,,
+19,An abstract class should have atleast one abstract method and class implementing this abstract class should override this method,A,3,,Yes,No,,
+20,We can create an object of an abstract class,B,3,,Yes,No,,
+21,We can have virtual methods in an abstract class,A,3,,Yes,No,,
+22,Interface is a contract. Whichever class inherits the Interface has to  implement these contract,B,4,An interface can not be inherited. It can only be implemented. ,Yes,No,,
+23,Everything in an interface is public?,A,4,,Yes,No,,
+24," While inheriting from base class, base class name should be first thing after colon(:)",A,4,,Yes,No,,
+25,Can we create an object of an Interface?,B,4,,Yes,No,,
+26,We can implement  from multiple infterfaces ,A,4,,Yes,No,,
+27,We inherit class but ------ interface,B,4,,Inherit,Implements,Derive,Create
+28,"Will this code compile?
+  private static List<IProductModel> AddData()
+        {
+            List<IProductModel> ListOfProduct = new List<IProductModel>();
+
+            ListOfProduct.Add(new PhysicalProductModel { Title = ""Nerf Football"" });
+            ListOfProduct.Add(new DigitalProductModel { Title = ""AntiVirus"" });
+
+            return ListOfProduct;
+        }
+
+    }
+
+    public IProductModel 
+    {
+
+
+public string Title { get; set; }
+    }
+
+public class PhysicalProductModel : IProductModel
+{
+    public string Title { get; set; }
+}
+
+
+public class DigitalProductModel
+{
+    public string Title { get; set; }
+
+}
+",A,4,DigitalProductModel  class should implement IProductModel,Yes,No,,
+29,Extention function works in the same namespace. Else we have to import the namespace,A,5,,Yes,No,,
+30,We can merge extention methoods with System or microsoft namespaces,A,5,,Yes,No,,
+31,"Is this code snippet for extention method correct?
+public static void LogWarning(this ISimpleLogger logger, string message)
+        {
+            var defaultColor = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            logger.Log(message, ""Warning"");
+            Console.ForegroundColor = defaultColor;
+        }",A,5,,Yes,No,,
+32,"Is this code snippet for extention method correct?
+public static void LogWarning(ISimpleLogger logger, string message)
+        {
+            var defaultColor = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            logger.Log(message, ""Warning"");
+            Console.ForegroundColor = defaultColor;
+        }",B,5,"""this"" keyword is missing",Yes,No,,
+33,can extention method only be static?,A,5,,Yes,No,,
+34,Dynamic varibales can be assigned at ,A,6,,Run time,Compile time,No error at all,Both a and b
+35,var variables can be assigned at ,B,6,,Run time,Compile time,No error at all,Both a and b
+36,"var testVar = 2;
+testVar = 1.1;
+Above statement will give ",A,6,,Run time,Compile time,No error at all,Both a and b
+37,var is strongly typed,A,6,,Yes,No,,
+38,"What is the output of following code snippet?
+static void Main(string[] args)
+        {
+            dynamic testDynamic;
+            testDynamic = 1.1;
+            testDynamic = testDynamic + ""Hi"";
+            Console.WriteLine(testDynamic);
+        }",C,6,,1.1,Hi,1.1Hi,Error
+39,"What will be the ouput of following code snippet?
+static void Main(string[] args)
+        {
+            var testVar =1.1;
+            testVar = testVar + ""Hi"";
+            Console.WriteLine(testVar);
+        }",D,6,,No error,Hi,1.1Hi,Compile time error
+40,"What will be the ouput of following code snippet?
+        static void Main(string[] args)
+        {
+            Console.WriteLine(SayHello());
+        }
+        static var SayHello()
+        {
+            return ""Hello"";
+        }",B,6,,Runtime Error,Hello,No output,Compile time error
+41,Dynamic can be used when retriving data from third party APIs,A,6,,Yes,No,,
+42,What is the full form of DRY,B,7,,Do Repeat Yourself,Do Not Repeat Yourself,Dynamic Rrefactorng  Yield,No fullf form exist
+43,Unit testing does help to achieve DRY principle ,A,7,Using unitesting we are not repeating ourselves by entring each data input in the UI and run the code ,Yes,No,,
+44,Is the Class Library (.NET Standard) and the Class Library (.NET Framework) same?,B,7,".NET standard - cover .NET framework as well as .NET core, xamrin",Yes,No,,
+45,DRY is not limited to writing the code but testing as well.,A,7,,Yes,No,,
