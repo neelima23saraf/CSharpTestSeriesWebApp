@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpTestSeriesLibrary
+namespace CSTSDataAccess
 {
     internal class Topic
     {

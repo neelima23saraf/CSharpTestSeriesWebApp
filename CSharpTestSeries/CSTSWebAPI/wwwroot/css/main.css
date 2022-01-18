@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+ }
+ *:before,
+ *:after {
+  box-sizing: border-box;
+ }
+
+ html,
+body {
+ height: 100%;
+ position: relative;
+}
+
+body{
+  color:rgb(0,0,0);
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#head {
+    background-color: rgb(222, 243, 251);
+    margin: 0;
+    padding-top: 20px;
+}
+
+.logo {
+    font-family: "Roboto Slab", serif;
+    color: rgb(0,0,0);
+    margin-top: 10px;
+    padding-top: 12px;
+    padding-left: 0px;
+    height: 2em;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+}
+
+.icon {
+   
+    color:rgb(136, 133, 133);
+    margin-top: 10px ;
+    padding: 10px;
+    
+    text-decoration: none;
+    display: inline-block;
+    font-size:20px;
+  }
+
+#head a:hover{
+  color: red;
+}
+
+#body{
+  margin: 0;
+  padding-top: 10px;
+  padding-left:20px;
+}
+
+.main-container
+{
+  min-height: 100vh; /* will cover the 100% of viewport */
+ overflow: hidden;
+ display: block;
+ position: relative;
+ padding-bottom: 100px; /* height of your footer */
+}
+
+#footer {
+    background-color: rgb(222, 243, 251);
+    color: rgb(85, 81, 81);
+    position: absolute;
+    bottom: 0;
+    font-size:5px;
+}
+
+#menu {
+
+color:rgb(12, 181, 246);
+font-weight:bold;
+
+}
+
+#menuitems {
+    color: rgb(12, 181, 246)
+}
