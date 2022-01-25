@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Topics]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [TopicName] NVARCHAR(500) NOT NULL, 
+    [VideoName] NVARCHAR(200) NULL, 
+    [VideoURL] NVARCHAR(500) NULL
+)

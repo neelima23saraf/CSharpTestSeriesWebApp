@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSTSDataAccess", "CSharpTes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSTSWebAPI", "CSTSWebAPI\CSTSWebAPI.csproj", "{11009EC9-E2DD-4588-817D-C5FE0A3D43DA}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CSTestSeriesDB", "CSTestSeriesDB\CSTestSeriesDB.sqlproj", "{D46BD068-B2B2-429A-973D-E4BB3245AA43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,12 @@ Global
 		{11009EC9-E2DD-4588-817D-C5FE0A3D43DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11009EC9-E2DD-4588-817D-C5FE0A3D43DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11009EC9-E2DD-4588-817D-C5FE0A3D43DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D46BD068-B2B2-429A-973D-E4BB3245AA43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D46BD068-B2B2-429A-973D-E4BB3245AA43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D46BD068-B2B2-429A-973D-E4BB3245AA43}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D46BD068-B2B2-429A-973D-E4BB3245AA43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D46BD068-B2B2-429A-973D-E4BB3245AA43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D46BD068-B2B2-429A-973D-E4BB3245AA43}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
