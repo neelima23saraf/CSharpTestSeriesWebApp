@@ -1,0 +1,16 @@
+﻿USE [CSTSDB]
+GO
+
+/****** Object: SqlProcedure [DBO].[GetTopic] Script Date: 1/27/2022 4:55:58 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [DBO].[GetTopic]
+    @Id int
+AS
+BEGIN
+	SELECT * FROM TOPICS WHERE Id = @Id
+END

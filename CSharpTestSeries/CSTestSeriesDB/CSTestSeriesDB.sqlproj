@@ -57,10 +57,18 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Publish\" />
+    <Folder Include="Tables" />
+    <Folder Include="StoreProcedures" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Topics.sql" />
-    <Build Include="Questions.sql" />
+    <Build Include="Tables\Questions.sql" />
+    <Build Include="Tables\Topics.sql" />
+    <Build Include="StoreProcedures\usp_DeleteTopic.sql" />
+    <Build Include="StoreProcedures\usp_GetAllQuestions.sql" />
+    <Build Include="StoreProcedures\usp_GetAllTopics.sql" />
+    <Build Include="StoreProcedures\usp_GetQuestion.sql" />
+    <Build Include="StoreProcedures\usp_GetTopic.sql" />
+    <Build Include="StoreProcedures\usp_InsertTopic.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\CSTestSeriesDB.publish.xml" />

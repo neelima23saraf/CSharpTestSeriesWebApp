@@ -15,8 +15,6 @@
 
 select * from dbo.Questions 
 
-insert into dbo.Questions (Question,Answer,	OptionA,OptionB,OptionC,OptionD,Explanation,TopicID) values()
-
 --insert into dbo.Questions (Question,Answer, OptionA,OptionB,OptionC,OptionD,Explanation,TopicID) values('Can a class have any access specifier ?','B','Yes','No','','','Elements defined in a namespace cannot be explicitly declared as private, protected, protected internal or private protected. A Class within a namespace can only be declared public or internal.',1)
 
 
@@ -60,4 +58,62 @@ insert into dbo.Questions (Question,Answer,	OptionA,OptionB,OptionC,OptionD,Expl
 --insert into dbo.Questions (Question,Answer, OptionA,OptionB,OptionC,OptionD,Explanation,TopicID) values('Is the Class Library (.NET Standard) and the Class Library (.NET Framework) same?','B','Yes','No','','','.NET standard - cover .NET framework as well as .NET core, xamrin',7)
 --insert into dbo.Questions (Question,Answer, OptionA,OptionB,OptionC,OptionD,Explanation,TopicID) values('DRY is not limited to writing the code but testing as well.','A','Yes','No','','','',7)
 
+
+
+-----**************************STORE PROCEDURES*********************************--------------
+
+
+--CREATE PROCEDURE [dbo].[GetAllQuestions]
+--AS
+--BEGIN
+--SELECT * FROM dbo.Questions
+--END
+
+
+--CREATE PROCEDURE [dbo].[GetQuestion]
+--	@Id int
+--AS
+--BEGIN
+--	SELECT * FROM dbo.Questions WHERE TopicId = @Id	
+--END
+
+
+--CREATE PROCEDURE [dbo].[GetAllTopics]
+--AS
+--BEGIN
+--	SELECT * FROM Topics
+--END
+
+--CREATE PROCEDURE [DBO].[GetTopic]
+--    @Id int
+--AS
+--BEGIN
+--	SELECT * FROM TOPICS WHERE Id = @Id
+--END
+
+--CREATE PROCEDURE [dbo].[InsertTopic]
+--    @TopicName nvarchar(500)
+--    ,@VideoName nvarchar(500)
+--    ,@VideoURL nvarchar(500)
+--AS
+--BEGIN
+--	INSERT INTO Topics (TopicName, VideoName, VideoURL) VALUES (@TopicName, @VideoName, @VideoURL)
+--END
+
+
+--create procedure [dbo].[DeleteTopic]
+--    @id int
+--as
+--begin
+--	delete from topics where id = @id
+--end
+
+
+
+CREATE PROCEDURE [dbo].[Procedure]
+	@param1 int = 0,
+	@param2 int
+AS
+	SELECT @param1, @param2
+RETURN 0
 

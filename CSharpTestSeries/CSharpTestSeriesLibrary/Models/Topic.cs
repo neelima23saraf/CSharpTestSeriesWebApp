@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace CSTSDataAccess.Models;
 
-namespace CSTSDataAccess
+public class Topic
 {
-    internal class Topic
-    {
-        public int TopicID { get; set; }
-        public string TopicName { get; set; }
-        public string  VideoName { get; set; }
+    public int Id { get; set; }
+    public string TopicName { get; set; }
+    public string VideoName { get; set; }
 
-        public string  VideoURL { get; set; }
-    }
+    public string VideoURL { get; set; }
 }
