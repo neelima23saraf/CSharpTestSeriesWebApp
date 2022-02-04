@@ -18,35 +18,17 @@ public class TopicController : Controller
     _Data = data;
   }
 
-  [HttpGet("/topic")]
-   public async Task<IResult> GetTopics()
+  //[HttpGet("/topic")]
+   public IActionResult Index()
   {
-    try
-    {
-      return Results.Ok(await _Data.GetAllTopics());
-    }
-    catch (Exception ex)
-    {
-
-      return Results.Problem(ex.Message);
-    }
+    return View(_Data.GetAllTopics());
   }
 
-  [HttpGet("/topic/{id}")]
-  public async Task<IResult> GetATopic(int id)
+  //[HttpGet("/topic/{id}")]
+  public IActionResult GetATopic(int id)
   {
-    try
-    {
-      var results = await _Data.GetTopic(id);
-      if (results == null) return Results.NotFound();
-      return Results.Ok(results);
-    }
-    catch (Exception ex)
-    {
-
-      return Results.Problem(ex.Message);
-    }
-  }
+      return View(_Data.GetTopic(id));
+   }
 
   [HttpPost("topic")]
   public async Task<IResult> InsertTopic(Topic topic)

@@ -2,10 +2,10 @@
 {
     public class Topic
     {
-        public int TopicID { get; set; }
-        public string TopicName { get; set; }
-        public string VideoName { get; set; }
+    public int Id { get; set; } = 1;
+    public string TopicName { get; set; } = "Data Access";
+    public string VideoName { get; set; } = "Data Access Videos";
 
-        public string VideoURL { get; set; }
+    public string VideoURL { get; set; } = "www.youtube.com";
     }
 }

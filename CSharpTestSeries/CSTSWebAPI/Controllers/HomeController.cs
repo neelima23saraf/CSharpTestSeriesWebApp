@@ -1,6 +1,7 @@
 ﻿using CSTSWebAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using Topic = CSTSWebAPI.Models.Topic;
 
 namespace CSTSWebAPI.Controllers
 {
@@ -12,10 +13,12 @@ namespace CSTSWebAPI.Controllers
         {
             _logger = logger;
         }
-
-        public IActionResult Index()
+    [HttpGet]
+    public IActionResult Index()
         {
-            return View();
+          ViewData["Message"] = "Neelima!"; //adding this to learn razor 
+      ViewData["Object"] = new Topic { Id=1, TopicName="test", VideoName="test", VideoURL="test"};     
+      return View();
         }
 
         public IActionResult Privacy()

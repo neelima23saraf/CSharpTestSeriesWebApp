@@ -27,17 +27,13 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-else
-{ 
-  app.UseSwagger();
-  app.UseSwaggerUI();
-}
+
 
 app.UseHttpsRedirection();
 
-//app.UseStaticFiles(); ***********Original line. Commented for swagger***************
+app.UseStaticFiles(); 
 
-//app.UseRouting(); ***********Original line. Commented for swagger***************
+app.UseRouting(); 
 
 //app.UseAuthorization(); ***********Original line. Commented for swagger***************
 

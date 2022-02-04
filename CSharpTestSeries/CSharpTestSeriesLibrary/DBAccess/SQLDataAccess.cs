@@ -12,10 +12,23 @@ public class SQLDataAccess : ISQLDataAccess
     _config = config;
   }
 
-  public async Task<IEnumerable<T>> LoadData<T, U>(string storeProcedure, U parameters, string connectionId = "CSTSConnectionString")
+  //public async Task<IEnumerable<T>> LoadData<T, U>(string storeProcedure, U parameters, string connectionId = "CSTSConnectionString")
+  //{
+  //  using IDbConnection connection = new SqlConnection(_config.GetConnectionString(connectionId));
+  //  return await connection.QueryAsync<T>(storeProcedure, parameters, commandType: CommandType.StoredProcedure);
+  //}
+
+
+  //public async Task SaveData<U>(string storeProcedure, U parameters, string connectionId = "CSTSConnectionString")
+  //{
+  //  using IDbConnection connection = new SqlConnection(_config.GetConnectionString(connectionId));
+  //  await connection.ExecuteAsync(storeProcedure, parameters, commandType: CommandType.StoredProcedure);
+  //}
+
+  public IEnumerable<T> LoadData<T, U>(string storeProcedure, U parameters, string connectionId = "CSTSConnectionString")
   {
     using IDbConnection connection = new SqlConnection(_config.GetConnectionString(connectionId));
-    return await connection.QueryAsync<T>(storeProcedure, parameters, commandType: CommandType.StoredProcedure);
+    return connection.Query<T>(storeProcedure, parameters, commandType: CommandType.StoredProcedure);
   }
 
 
