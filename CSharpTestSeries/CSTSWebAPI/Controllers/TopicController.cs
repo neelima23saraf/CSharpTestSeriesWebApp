@@ -18,13 +18,13 @@ public class TopicController : Controller
     _Data = data;
   }
 
-  //[HttpGet("/topic")]
+  [HttpGet("/topic")]
    public IActionResult Index()
   {
     return View(_Data.GetAllTopics());
   }
 
-  //[HttpGet("/topic/{id}")]
+  [HttpGet("/topic/{id}")]
   public IActionResult GetATopic(int id)
   {
       return View(_Data.GetTopic(id));

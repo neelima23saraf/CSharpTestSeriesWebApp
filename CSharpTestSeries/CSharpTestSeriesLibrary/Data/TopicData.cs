@@ -12,32 +12,21 @@ public class TopicData : ITopicData
     _db = db;
   }
 
-
   /// <summary>
   /// Get all the topics from the database  
   /// </summary>
   /// <returns></returns>
-  //public Task<IEnumerable<Topic>> GetAllTopics() => _db.LoadData<Topic, dynamic>("dbo.GetAllTopics", new { });
-  public IEnumerable<Topic> GetAllTopics() => _db.LoadData<Topic, dynamic>("dbo.GetAllTopics", new { });
+    public async Task<IEnumerable<Topic>> GetAllTopics() => await _db.LoadData<Topic, dynamic>("dbo.GetAllTopics", new { });
 
-  public Topic? GetTopic(int id)
+  public async Task<Topic?> GetTopic(int id)
   {
-    var result = _db.LoadData<Topic, dynamic>("dbo.GetTopic", new { Id = id });
+    var result = await _db.LoadData<Topic, dynamic>("dbo.GetTopic", new { Id = id });
     return result.FirstOrDefault();
   }
-  //public async Task<Topic?> GetTopic(int id)
-  //{
-  //  var result = await _db.LoadData<Topic, dynamic>("dbo.GetTopic", new { Id = id });
-  //  return result.FirstOrDefault();
-  //}
 
-  // TODO - Insert
+  //public Task InsertTopic(Topic topic) => _db.SaveData("dbo.InsertTopic", new { topic.TopicName, topic.VideoName, topic.VideoURL });
 
-  public Task InsertTopic(Topic topic) => _db.SaveData("dbo.InsertTopic", new { topic.TopicName, topic.VideoName, topic.VideoURL });
-
-  // TODO - Delete
-
-  public Task DeleteTopic(int id) => _db.SaveData("dbo.DeleteTopic", new { id = id });
+  //public Task DeleteTopic(int id) => _db.SaveData("dbo.DeleteTopic", new { id = id });
 
 
 }

@@ -5,8 +5,8 @@ namespace CSTSDataAccess.Data;
 
 public interface ITopicData
 {
-  IEnumerable<Topic> GetAllTopics();
-  Topic? GetTopic(int id);
-  Task InsertTopic(Topic topic);
-  Task DeleteTopic(int id);
+  Task<IEnumerable<Topic>> GetAllTopics();
+  Task<Topic?> GetTopic(int id);
+  //Task InsertTopic(Topic topic);
+  //Task DeleteTopic(int id);
 }
