@@ -11,6 +11,7 @@ public class QuestionModel
     public string OptionB { get; set; }
     public string OptionC { get; set; }
     public string OptionD { get; set; }
+  public string TopicName { get; set; }
 
 
 }

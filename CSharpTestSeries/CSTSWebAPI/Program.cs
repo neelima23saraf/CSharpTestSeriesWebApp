@@ -14,6 +14,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<ISQLDataAccess, SQLDataAccess>();
 builder.Services.AddSingleton<ITopicData, TopicData>();
+builder.Services.AddSingleton<IQuestionData, QuestionData>();
 
 
 

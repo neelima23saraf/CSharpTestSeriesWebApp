@@ -1,0 +1,77 @@
+﻿@model IEnumerable<CSTSWebAPI.Models.Questions>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Question)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Answer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TopicID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Explanation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OptionA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OptionB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OptionC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OptionD)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Question)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Answer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TopicID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Explanation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OptionA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OptionB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OptionC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OptionD)
+            </td>
+            
+        </tr>
+}
+    </tbody>
+</table>
