@@ -13,7 +13,7 @@
     }
 }
 
-<h1>Index</h1>
+<h1> @foreach (var item in Model){ @Html.DisplayFor(modelItem => item.TopicName)}</h1>
 
 <table class="table">
     <thead>

@@ -33,7 +33,9 @@ public class QuestionController : Controller
           OptionA = item.OptionA,
           OptionB = item.OptionB,
           OptionC = item.OptionC,
-          OptionD = item.OptionD
+          OptionD = item.OptionD,
+          TopicName = item.TopicName
+
         });
 
       }

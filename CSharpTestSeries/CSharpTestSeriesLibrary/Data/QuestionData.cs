@@ -20,7 +20,7 @@ public class QuestionData : IQuestionData
   public async Task<IEnumerable<QuestionModel>> GetQuestionsForATopic( int id)
   {
 
-    var result = await _db.LoadData<QuestionModel, dynamic>("dbo.GetQuestion", new { Id = id });
+    var result = await _db.LoadData<QuestionModel, dynamic>("dbo.GetATopicQuestion", new { Id = id });
     return result;
 
   }
