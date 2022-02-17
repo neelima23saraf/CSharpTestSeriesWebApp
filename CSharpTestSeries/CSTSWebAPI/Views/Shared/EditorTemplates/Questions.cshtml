@@ -1,0 +1,26 @@
+﻿@model Questions
+
+<div>
+    @Html.HiddenFor(x => x.Id)
+    @Html.HiddenFor(x => x.Question)
+
+    <h2>@Html.DisplayFor(x => x.TopicName)</h2>
+    <p>@Html.DisplayFor(x => x.Question)</p>
+    @Html.RadioButtonFor(x => x.Answer, "A", new{ id = Html.ViewData.TemplateInfo.GetFullHtmlFieldName("OptionA")})
+    @Html.DisplayFor(x => x.OptionA)
+    <br />
+    @Html.RadioButtonFor(x => x.Answer, "B", new{ id = Html.ViewData.TemplateInfo.GetFullHtmlFieldName("OptionB")})
+    @Html.DisplayFor(x => x.OptionB)
+    <br />
+    @if(! string.IsNullOrEmpty(Model.OptionC)) 
+    {
+        @Html.RadioButtonFor(x => x.Answer, "C", new { id = Html.ViewData.TemplateInfo.GetFullHtmlFieldName("OptionC") })
+        @Html.DisplayFor(x => x.OptionC)
+    }
+    <br />
+    @if (! string.IsNullOrEmpty(Model.OptionD))
+    {
+        @Html.RadioButtonFor(x => x.Answer, "D", new { id = Html.ViewData.TemplateInfo.GetFullHtmlFieldName("OptionD") })
+        @Html.DisplayFor(x => x.OptionD)
+    }
+</div>
